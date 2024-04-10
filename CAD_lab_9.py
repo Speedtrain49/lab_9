@@ -7,6 +7,13 @@ def encode(password):
     for num in password:
         newPassword += encode[num]
     return newPassword
+
+def decode(password):
+    newerPassword = ""
+    decode = {"3":"0","4":"1","5":"2","6":"3","7":"4","8":"5","9":"6","0":"7","1":"8","2":"9"}
+    for num in password:
+        newerPassword += decode[num]
+    return newerPassword
 def main():
     run = 1
 
@@ -21,7 +28,8 @@ def main():
             password = encode(passencode)
             print("Your password has been encoded and stored!\n")
         elif choice == "2":
-            #decode goes here
+            decodedPass = decode(password)
+            print(f"The encoded password is {password}, and the original password is {decodedPass}")
             pass
         elif choice =="3":
             run = 0
