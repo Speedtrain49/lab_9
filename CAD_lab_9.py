@@ -1,3 +1,4 @@
+#Chase DuPre'
 def encode(password):
     newPassword = ""
 
